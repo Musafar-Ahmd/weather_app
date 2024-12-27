@@ -4,6 +4,7 @@ import 'package:provider/provider.dart';
 import 'package:weather_app/common/custom_button.dart';
 import 'package:weather_app/common/custom_input_decoration.dart';
 import 'package:weather_app/constants/app_colors.dart';
+import 'package:weather_app/constants/app_keys.dart';
 import 'package:weather_app/modules/home/view_model/view_model.dart';
 import 'package:weather_app/constants/app_strings.dart';
 
@@ -26,8 +27,8 @@ class _HomePageState extends State<HomePage> {
 
   getCity() async {
     final viewModel = Provider.of<HomeViewModel>(context, listen: false);
-    var box = await Hive.openBox('weather');
-    var city = box.get('city', defaultValue: 0);
+    var box = await Hive.openBox(AppKeys.weather);
+    var city = box.get(AppKeys.city, defaultValue: 0);
     _placeController.text = city;
     if (city != null) {
       viewModel.getDetail(city, context);
@@ -185,7 +186,7 @@ class _HomePageState extends State<HomePage> {
   }
 
   void saveCity(value) async {
-    var box = await Hive.openBox('weather');
-    await box.put('city', value);
+    var box = await Hive.openBox(AppKeys.weather);
+    await box.put(AppKeys.city, value);
   }
 }
