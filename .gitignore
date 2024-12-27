@@ -1,0 +1,60 @@
+# Flutter/Dart/Pub related
+.dart_tool/
+.packages
+pubspec.lock
+
+# Build outputs
+build/
+*.apk
+*.ipa
+*.app
+*.app.dSYM
+*.dSYM
+
+# iOS
+ios/Flutter/Flutter.framework
+ios/Flutter/Flutter.podspec
+ios/Flutter/Flutter.podspec.json
+ios/.symlinks/
+ios/Pods/
+ios/Podfile.lock
+
+# Android
+android/.gradle/
+android/app/debug/
+android/app/profile/
+android/app/release/
+android/local.properties
+
+# Mac
+*.DS_Store
+
+# Linux
+*~ 
+
+# VS Code settings
+.vscode/
+
+# IntelliJ IDEA
+.idea/
+*.iml
+
+# JetBrains project files
+*.ipr
+*.iws
+*.idea/
+
+# Temporary files
+*.tmp
+*.swp
+*.swo
+
+# Other
+*.log
+*.dat
+*.csv
+*.ts
+*.jar
+
+# Custom local files
+*.env
